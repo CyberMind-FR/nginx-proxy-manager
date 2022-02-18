@@ -3,9 +3,6 @@
 set -e
 
 mkdir -p /data/logs
-echo "Redirecting Admin panel logs to /dev/null (default behavior)"
-sed-patch 's|<ADMIN_ACCESS_LOG>|/dev/null|' /etc/nginx/conf.d/production.conf
-sed-patch 's|<ADMIN_ERROR_LOG>|/dev/null|' /etc/nginx/conf.d/production.conf
 echo "Changing ownership of /data/logs to $(id -u):$(id -g)"
 chown -R "$(id -u):$(id -g)" /data/logs
 
