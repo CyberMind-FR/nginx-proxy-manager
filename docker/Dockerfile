@@ -3,7 +3,7 @@
 
 # This file assumes that the frontend has been built using ./scripts/frontend-build
 
-FROM nginxproxymanager/nginx-full:certbot-node
+FROM baudneo/nginx-full:certbot-node
 
 ARG TARGETPLATFORM
 ARG BUILD_VERSION
@@ -53,6 +53,6 @@ LABEL org.label-schema.schema-version="1.0" \
 	org.label-schema.license="MIT" \
 	org.label-schema.name="nginx-proxy-manager" \
 	org.label-schema.description="Docker container for managing Nginx proxy hosts with a simple, powerful interface " \
-	org.label-schema.url="https://github.com/jc21/nginx-proxy-manager" \
-	org.label-schema.vcs-url="https://github.com/jc21/nginx-proxy-manager.git" \
-	org.label-schema.cmd="docker run --rm -ti jc21/nginx-proxy-manager:latest"
+	org.label-schema.url="https://github.com/baudneo/nginx-proxy-manager" \
+	org.label-schema.vcs-url="https://github.com/baudneo/nginx-proxy-manager.git" \
+	org.label-schema.cmd="docker run --rm -ti baudneo/nginx-proxy-manager:latest"
